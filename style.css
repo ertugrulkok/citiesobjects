@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 20px;
+  }
+  body {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    background-color: rgba(79, 86, 92, 0.991);
+  }
+  .container {
+    margin-top: 1em;
+    display: grid;
+    align-items: center;
+    border-radius: 20px;
+    gap: 15px;
+  }
+  .btn {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  button {
+    background-color: rgb(227, 219, 211);
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+  
+    
+  }
+
+
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(176, 167, 182);
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    align-items: center;
+    padding-left: 15px;
+    
+    
+  }
+  .resultTotal {
+    display: grid;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 15px;
+    padding: 1em;
+    width: 200px;
+  }
+  .city {
+    display: grid;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 15px;
+    padding: 1em;
+    width: 150px;
+    color: black;
+  }
+  
+
+  img{
+  
+      padding: 15px;
+      border-radius: 30px;
+  }
+
+  .submessage{
+  
+    background-color: rgb(14, 165, 165);
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    height: 70px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+  }
+  #cap_p{
+    width: 60px;
+  }
+
+  

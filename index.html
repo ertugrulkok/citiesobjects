@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="btn">
+        <button id="p1" onclick="ankara()">Ankara</button>
+        <button id="p1" onclick="zurich()">Zurich</button>
+        <button id="p1" onclick="berlin()">Berlin</button>
+        <button id="p1" onclick="toronto()">Toronto</button>
+        <button id="p1" onclick="amsterdam()">Amsterdam</button>
+        <button id="p1" onclick="capetown()">Cape Town</button>
+        <button id="p1" onclick="istanbul()">Istanbul</button>
+        <button id="p1" onclick="sydney()">Sydney</button>
+        <button id="p1" onclick="rio()">Rio De Janerio</button>
+      </div>
+      <div class="box">
+        <div class="city">
+          <p id="name">Name:</p>
+          <p id="country">Country:</p>
+          <p id="population">Population:</p>
+          <p id="area">Area:</p>
+          <p id="capital">Capital:</p>
+        </div>
+        <div class="resultTotal">
+          <p id="name_p"></p>
+          <p id="country_p"></p>
+          <p id="pop_p"></p>
+          <p id="area_p"></p>
+          <div id=""> <img id="cap_p" src="" alt=""></div>
+        </div>
+        <div class="right_photo" id="picture">
+          <img id="photo" src="ankara1.jpg" alt="" />
+        </div>
+      </div>
+      <div class="submessage" id="submessage">Some beautiful cities known as the capital, but some are the real one!</div>
+    </div>
+
+    <script>
+      function Cities(name, country, population, area, capital) {
+        this.name = name;
+        this.country = country;
+        this.population = population;
+        this.area = area;
+        this.capital = capital;
+
+        this.cityFunction = function () {
+          if (this.capital == true) {
+            console.log(
+              this.name + " is a city which is the capital of " + this.country + "."
+            );
+            document.getElementById("submessage").innerHTML = this.name +" is a city which is the capital of " +
+              this.country + ".";
+            
+              document.getElementById("cap_p").src = "check.png";
+
+          } else if (this.capital == false) {
+            console.log(
+              this.name + " is a beautiful city in "+this.country+". But it is not the capital of " +this.country+ "."
+            );
+            document.getElementById("submessage").innerHTML = this.name + " is a beautiful city in "+this.country+ 
+            ". But it is not the capital of " + this.country+ "."
+            
+            document.getElementById("cap_p").src = "cross.png";
+          }
+        };
+      }
+
+      const city1 = new Cities(  "Ankara",   "Turkey",   "4 Million",   "25.632 km²",  true );
+      const city2 = new Cities("Zurich", "Switzerland", "87,88 km²","415.367", false);
+      const city3 = new Cities("Berlin", "Germany", "415.367","891,8 km²" , true);
+      const city4 = new Cities("Toronto", "Canada", "415.367","630,2 km²", false);
+      const city5 = new Cities("Amsterdam", "Nederland", "415.367","219,3 km²", true);
+      const city6 = new Cities("Cape Town", "South Africa", "415.367","2,461 km2 ", false);
+      const city7 = new Cities("Istanbul", "Turkey", "415.367","2,576.85 km2", false);
+      const city8 = new Cities("Sydney", "Australia", "415.367","12,367.7 km2", false);
+      const city9 = new Cities("Rio de Janerio", "Brasil", "415.367","1,221 km2", false);
+      
+      
+         function ankara() {
+
+        document.getElementById("name_p").innerHTML = city1.name;
+        document.getElementById("country_p").innerHTML = city1.country;
+        document.getElementById("pop_p").innerHTML = city1.population;
+        document.getElementById("area_p").innerHTML = city1.area;
+        document.getElementById("photo").src = "ankara1.jpg";
+        city1.cityFunction();;
+        
+        
+      }
+      function zurich() {
+        document.getElementById("name_p").innerHTML = city2.name;
+        document.getElementById("country_p").innerHTML = city2.country;
+        document.getElementById("pop_p").innerHTML = city2.population;
+        document.getElementById("area_p").innerHTML = city2.area;
+        document.getElementById("photo").src = "zurih.jpg";
+        city2.cityFunction();
+      }
+
+      function berlin() {
+        document.getElementById("name_p").innerHTML = city3.name;
+        document.getElementById("country_p").innerHTML = city3.country;
+        document.getElementById("pop_p").innerHTML = city3.population;
+        document.getElementById("area_p").innerHTML = city3.area;
+        document.getElementById("photo").src = "berlin.jpg";
+       city3.cityFunction();
+      }
+      function toronto() {
+        document.getElementById("name_p").innerHTML = city4.name;
+        document.getElementById("country_p").innerHTML = city4.country;
+        document.getElementById("pop_p").innerHTML = city4.population;
+        document.getElementById("area_p").innerHTML = city4.area;
+        document.getElementById("photo").src = "toronto.jpg";
+        city4.cityFunction();
+      
+      }
+
+      function amsterdam() {
+        document.getElementById("name_p").innerHTML = city5.name;
+        document.getElementById("country_p").innerHTML = city5.country;
+        document.getElementById("pop_p").innerHTML = city5.population;
+        document.getElementById("area_p").innerHTML = city5.area;
+        document.getElementById("photo").src = "amsterdam.webp";
+        city5.cityFunction();
+        
+      }
+      function capetown() {
+        document.getElementById("name_p").innerHTML = city6.name;
+        document.getElementById("country_p").innerHTML = city6.country;
+        document.getElementById("pop_p").innerHTML = city6.population;
+        document.getElementById("area_p").innerHTML = city6.area;
+        document.getElementById("photo").src = "capetown.jpg";
+        city6.cityFunction();
+        
+      }
+      function istanbul() {
+        document.getElementById("name_p").innerHTML = city7.name;
+        document.getElementById("country_p").innerHTML = city7.country;
+        document.getElementById("pop_p").innerHTML = city7.population;
+        document.getElementById("area_p").innerHTML = city7.area;
+        document.getElementById("photo").src = "istanbul.jpg";
+        city7.cityFunction();
+        
+      }
+      function sydney() {
+        document.getElementById("name_p").innerHTML = city8.name;
+        document.getElementById("country_p").innerHTML = city8.country;
+        document.getElementById("pop_p").innerHTML = city8.population;
+        document.getElementById("area_p").innerHTML = city8.area;
+        document.getElementById("photo").src = "sydney.jpg";
+        city8.cityFunction();
+ 
+      }
+      function rio() {
+        document.getElementById("name_p").innerHTML = city9.name;
+        document.getElementById("country_p").innerHTML = city9.country;
+        document.getElementById("pop_p").innerHTML = city9.population;
+        document.getElementById("area_p").innerHTML = city9.area;
+        document.getElementById("photo").src = "rio.jpg";
+        city9.cityFunction();
+       
+      }
+      
+    </script>
+  </body>
+</html>
